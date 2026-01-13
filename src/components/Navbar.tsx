@@ -56,7 +56,13 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6">
+          <div
+            className="hidden md:flex items-center gap-6  bg-white/5 px-6 py-4 rounded-full"
+            style={{
+              clipPath:
+                "polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)",
+            }}
+          >
             {navLinks.map((link) => (
               <motion.a
                 key={link.label}

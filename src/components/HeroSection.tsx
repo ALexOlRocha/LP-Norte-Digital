@@ -19,8 +19,23 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
+      
+      {/* GRID DE PONTO - CORRIGIDO */}
+      <div 
+        className="absolute z-20 inset-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '120px 120px',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent)',
+          maskImage: 'radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent)'
+        }}
+      />
 
       {/* Animated Background Shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -52,15 +67,10 @@ const HeroSection = () => {
             ease: "easeInOut",
           }}
         />
-        {/* Grid pattern overlay */}
-        <div
-          className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-size-[120px_120px] 
-  mask-[radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"
-        ></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto flex px-6 relative justify-center z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mx-auto">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
