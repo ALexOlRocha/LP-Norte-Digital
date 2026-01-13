@@ -125,11 +125,41 @@ const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="bg-primary group rounded-full hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary transition-all duration-300 group"
+                className="
+    group relative overflow-hidden
+    rounded-full
+    bg-primary hover:bg-primary-glow
+    px-5 py-6 text-lg font-semibold
+    text-primary-foreground
+    transition-all duration-300
+    flex items-center gap-3
+    shadow-lg hover:shadow-primary/40
+  "
               >
-                Quero um PageBot
-                <ArrowUpRight className="w-4 h-4 " />
+                {/* Glow interno */}
+                <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition" />
+
+                {/* Texto */}
+                <span className="relative z-10">Quero um PageBot</span>
+
+                {/* Ícone */}
+                <span
+                  className="
+      relative z-10
+      w-8 h-8
+      flex items-center justify-center
+      rounded-full
+      bg-black/80
+      text-white
+      transition-all duration-300
+      group-hover:translate-x-1
+      group-hover:bg-black
+    "
+                >
+                  <ArrowUpRight className="w-5 h-5" />
+                </span>
               </Button>
+
               <Button
                 size="lg"
                 variant="outline"
