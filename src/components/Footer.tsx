@@ -123,18 +123,12 @@ const Footer = () => {
               className="flex items-center gap-3 mb-6 group"
               whileHover={{ x: 5 }}
             >
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg glow-primary"
-                style={{
-                  background:
-                    "linear-gradient(135deg, hsl(174 60% 28%) 0%, hsl(174 70% 40%) 100%)",
-                  clipPath:
-                    "polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)",
-                }}
-              >
-                <span className="text-primary-foreground font-display font-bold text-2xl">
-                  N
-                </span>
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg glow-primary">
+                <img
+                  src="/logo.png"
+                  alt="Norte Digital"
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div>
                 <span className="font-display font-bold text-2xl text-foreground block leading-none">

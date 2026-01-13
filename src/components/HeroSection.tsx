@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import PageBotDemo from "./PageBotDemo";
 import { useRef } from "react";
 const HeroSection = () => {
@@ -19,21 +19,22 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
-      
+
       {/* GRID DE PONTO - CORRIGIDO */}
-      <div 
-        className="absolute z-20 inset-0"
+      <div
+        className="absolute z-10 inset-0"
         style={{
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '120px 120px',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent)',
-          maskImage: 'radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent)'
+          backgroundSize: "120px 120px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent)",
+          maskImage:
+            "radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent)",
         }}
       />
 
@@ -70,7 +71,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto flex px-6 relative justify-center z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mx-auto z-40">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -124,10 +125,10 @@ const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="bg-primary rounded-full hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary transition-all duration-300 group"
+                className="bg-primary group rounded-full hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary transition-all duration-300 group"
               >
                 Quero um PageBot
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 " />
               </Button>
               <Button
                 size="lg"
