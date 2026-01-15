@@ -31,7 +31,10 @@ const WebSystemsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="sistemas" className="py-32 relative overflow-hidden bg-secondary/20">
+    <section
+      id="sistemas"
+      className="py-32 relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background"
+    >
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Header */}
         <motion.div
@@ -66,8 +69,12 @@ const WebSystemsSection = () => {
                 <system.icon className="w-5 h-5 text-primary" />
               </div>
               <div className="text-left">
-                <h3 className="font-medium text-foreground text-sm">{system.title}</h3>
-                <p className="text-xs text-muted-foreground">{system.description}</p>
+                <h3 className="font-medium text-foreground text-sm">
+                  {system.title}
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  {system.description}
+                </p>
               </div>
             </motion.div>
           ))}

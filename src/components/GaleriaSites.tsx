@@ -22,7 +22,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
   items = defaultPortfolioItems,
 }) => {
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-br from-black via-[#2a9d90] to-black flex flex-col items-center justify-center py-24 overflow-hidden">
+    <section className="relative w-full min-h-screen bg-gradient-to-b from-background via-secondary/20 to-background flex flex-col items-center justify-center py-24 overflow-hidden">
       {/* Badge */}
       {/* Wave */}
       <svg

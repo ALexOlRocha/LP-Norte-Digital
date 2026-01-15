@@ -44,7 +44,7 @@ const ContactSection = () => {
   return (
     <section id="contato" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[hsl(200_15%_10%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
 
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Header */}
