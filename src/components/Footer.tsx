@@ -33,8 +33,22 @@ const Footer = () => {
 
   const contacts = [
     { icon: MessageCircle, text: "WhatsApp", href: "#" },
-    { icon: Mail, text: "contato@nortedigital.com", href: "#" },
-    { icon: MapPin, text: "Brasil", href: "#" },
+    { icon: Mail, text: "nortedigital2026@gmail.com", href: "#" },
+    { icon: MapPin, text: "Cajamar, São Paulo", href: "#" },
+  ];
+  const socialLinks = [
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/nortedigital.oficial/",
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/nortedigitalofc/?viewAsMember=true",
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/nortedigital",
+    },
   ];
 
   return (
@@ -213,7 +227,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                 >
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center bg-secondary/50 group-hover:bg-primary/20 transition-colors"
+                    className="w-10 h-10 rounded-full flex items-center justify-center bg-white/80 group-hover:bg-primary/20 transition-colors"
                     style={{
                       clipPath:
                         "polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%)",
@@ -255,14 +269,16 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
-            {["Instagram", "LinkedIn", "GitHub"].map((social, index) => (
+            {socialLinks.map(({ label, href }) => (
               <motion.a
-                key={social}
-                href="#"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
                 whileHover={{ y: -2 }}
               >
-                {social}
+                {label}
               </motion.a>
             ))}
           </div>

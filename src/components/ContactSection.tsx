@@ -24,19 +24,19 @@ const ContactSection = () => {
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      href: "https://wa.me/5500000000000",
+      href: "https://wa.me/5511999825835",
       color: "hover:bg-green-500/20 hover:text-green-500",
     },
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://instagram.com/nortedigital",
+      href: "https://www.instagram.com/nortedigital.oficial/",
       color: "hover:bg-pink-500/20 hover:text-pink-500",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/company/nortedigital",
+      href: "https://www.linkedin.com/company/nortedigitalofc/?viewAsMember=true",
       color: "hover:bg-blue-500/20 hover:text-blue-500",
     },
   ];
