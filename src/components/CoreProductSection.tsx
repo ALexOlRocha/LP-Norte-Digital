@@ -2,7 +2,13 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, FileText, MessageCircle, ArrowRight } from "lucide-react";
+import {
+  Clock,
+  Users,
+  FileText,
+  MessageCircle,
+  ArrowRight,
+} from "lucide-react";
 
 const features = [
   {
@@ -88,13 +94,13 @@ const CoreProductSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <Button
-            size="lg"
+          <a
+            href="#contato"
             className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary transition-all duration-300 group"
           >
-            Quero automatizar meu atendimento
+            Quero automatizar
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          </a>
         </motion.div>
       </div>
     </section>

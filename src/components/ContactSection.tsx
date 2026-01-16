@@ -66,34 +66,58 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Left - Map/Location */}
+          {/* Left - Google Maps */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="glass-card rounded-3xl overflow-hidden h-full min-h-[400px]">
-              {/* Map placeholder with styled overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-glow/5" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-10 h-10 text-primary" />
+            <div className="glass-card rounded-3xl overflow-hidden h-full min-h-[400px] relative">
+              {/* Google Maps Embed */}
+              <div className="absolute inset-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3353542480544!2d-46.8819029!3d-23.5175369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03e20e108cc1%3A0x9f3d6453880edc71!2sRua%20Ant%C3%B4nio%20Carlos%20Paiva%20Camelo%20-%20Jordan%C3%A9sia%2C%20Cajamar%20-%20SP%2C%2007750-000%2C%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1710780123456!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style={{
+                    border: 0,
+                    filter: "grayscale(20%) contrast(110%) saturate(120%)",
+                  }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização Norte Digital"
+                  className="opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent pointer-events-none" />
+
+              {/* Location info overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-6 pointer-events-none">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold mb-2">
-                    Nossa Localização
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    São Paulo, SP - Brasil
-                    <br />
-                    Atendemos todo o Brasil
-                  </p>
+                  <div className="pointer-events-auto">
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-1">
+                      Norte Digital
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Rua Antônio Carlos Paiva Camelo
+                      <br />
+                      Jordanésia, Cajamar - SP
+                      <br />
+                      CEP: 07750-000
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Grid pattern overlay */}
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(13,79,79,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(13,79,79,0.05)_1px,transparent_1px)] bg-[size:30px_30px]" />
+              {/* Grid pattern overlay (subtle) */}
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(13,79,79,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(13,79,79,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-50" />
             </div>
           </motion.div>
 
@@ -147,11 +171,11 @@ const ContactSection = () => {
 
               {/* Divider */}
               <div className="flex items-center gap-4 my-8">
-                <div className="flex-1 h-px bg-border/30" />
+                <div className="flex-1 h-px bg-border/60" />
                 <span className="text-sm text-muted-foreground">
                   ou conecte-se
                 </span>
-                <div className="flex-1 h-px bg-border/30" />
+                <div className="flex-1 h-px bg-border/60" />
               </div>
 
               {/* Social Links */}
