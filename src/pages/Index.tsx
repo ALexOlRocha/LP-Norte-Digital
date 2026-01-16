@@ -9,14 +9,29 @@ import WebSystemsSection from "@/components/WebSystemsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import GaleriaSites from "@/components/GaleriaSites";
+import PageBotSection from "@/components/PageBotSection";
+import { useEffect, useState } from "react";
+import Loading from "@/components/Loading";
 
 const Index = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loading />;
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <ScrollPhrases />
       <CoreProductSection />
+      <PageBotSection />
       <ServicesSection />
       <DigitalPresenceSection />
       <GaleriaSites />
