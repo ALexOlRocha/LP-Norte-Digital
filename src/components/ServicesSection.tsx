@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Play } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import Fluxo from "./Fluxo";
 
 interface Service {
   title: string;
@@ -74,7 +75,7 @@ const ServicesSection = () => {
 
   return (
     <section id="servicos" className="py-32 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10" ref={ref}>
+      <div className="container mx-auto px-6 relative z-10 space-y-8" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -95,7 +96,7 @@ const ServicesSection = () => {
         </motion.div>
 
         {/* Interactive Slider */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center space-y-4">
           {/* Left - Image Display */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -253,6 +254,7 @@ const ServicesSection = () => {
             </Button>
           </motion.div>
         </div>
+        <Fluxo />
       </div>
 
       {/* Modal de Vídeo */}

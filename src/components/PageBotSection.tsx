@@ -184,8 +184,8 @@ const PageBotSection = () => {
                   <Bot className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">PageBot</p>
-                  <p className="text-xs text-primary">Online agora</p>
+                  <p className="font-semibold text-foreground">Norte Digital</p>
+                  <p className="text-xs text-primary">Online</p>
                 </div>
                 <div className="ml-auto flex gap-1">
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
