@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ScrollPhrases from "@/components/ScrollPhrases";
@@ -12,6 +14,7 @@ import GaleriaSites from "@/components/GaleriaSites";
 import PageBotSection from "@/components/PageBotSection";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
+import AgentProvider from "@/components/AgentProvider";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -25,19 +28,50 @@ const Index = () => {
   }, []);
 
   if (loading) return <Loading />;
+
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
-      <HeroSection />
+
+      {/* Seções com IDs para o agente detectar */}
+      <section id="hero">
+        <HeroSection />
+      </section>
+
       <ScrollPhrases />
-      <PageBotSection />
-      <CoreProductSection />
-      <ServicesSection />
-      <DigitalPresenceSection />
-      <GaleriaSites />
-      <PortfolioSection />
-      <WebSystemsSection />
-      <ContactSection />
+
+      <section id="whatsapp-bot">
+        <PageBotSection />
+      </section>
+
+      <section id="core-products">
+        <CoreProductSection />
+      </section>
+
+      <section id="services">
+        <ServicesSection />
+      </section>
+
+      <section id="digital-presence">
+        <DigitalPresenceSection />
+      </section>
+
+      <section id="gallery">
+        <GaleriaSites />
+      </section>
+
+      <section id="portfolio">
+        <PortfolioSection />
+      </section>
+
+      <section id="web-systems">
+        <WebSystemsSection />
+      </section>
+
+      <section id="contact">
+        <ContactSection />
+      </section>
+
       <Footer />
     </main>
   );
