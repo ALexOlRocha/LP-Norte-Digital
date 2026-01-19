@@ -244,9 +244,9 @@ const HeroSection = () => {
               <motion.div
                 whileHover={{ scale: 1.02, y: -3 }}
                 whileTap={{ scale: 0.98 }}
-                style={{ transformStyle: "preserve-3d" }}
               >
                 <Button
+                  asChild
                   size="lg"
                   className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground font-semibold px-8 py-7 text-lg transition-all duration-300 group relative overflow-hidden"
                   style={{
@@ -254,23 +254,27 @@ const HeroSection = () => {
                       "0 10px 40px rgba(13, 79, 79, 0.4), 0 0 0 1px rgba(13, 79, 79, 0.1)",
                   }}
                 >
-                  <span className="relative z-10 flex items-center">
-                    Quero um PageBot
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                  <motion.div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <a href="/pagebot">
+                    <span className="relative z-10 flex items-center">
+                      Quero uma pagebot
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                    <motion.div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
                 </Button>
               </motion.div>
+
               <motion.div
                 whileHover={{ scale: 1.02, y: -3 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="border-border/50 bg-secondary/30 backdrop-blur-sm hover:bg-secondary/50 text-foreground font-semibold px-8 py-7 text-lg transition-all duration-300"
                 >
-                  Ver soluções
+                  <a href="#sistemas">Ver soluções</a>
                 </Button>
               </motion.div>
             </motion.div>
