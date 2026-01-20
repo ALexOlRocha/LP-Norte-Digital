@@ -1,28 +1,39 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Calculator, Package, LineChart, Cog, ArrowRight } from "lucide-react";
+import {
+  Calculator,
+  Package,
+  LineChart,
+  Cog,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
 
 const systems = [
   {
     icon: Calculator,
     title: "Orçamentos",
-    description: "Propostas automáticas",
+    description: "Propostas automáticas com IA",
+    color: "from-blue-500 to-cyan-400",
   },
   {
     icon: Package,
-    title: "Estoque",
-    description: "Controle total",
+    title: "Estoque Inteligente",
+    description: "Controle total com alertas",
+    color: "from-emerald-500 to-green-400",
   },
   {
     icon: LineChart,
     title: "Dashboards",
     description: "Métricas em tempo real",
+    color: "from-purple-500 to-pink-400",
   },
   {
     icon: Cog,
     title: "Sob Medida",
-    description: "Do seu jeito",
+    description: "Personalização total",
+    color: "from-orange-500 to-amber-400",
   },
 ];
 
@@ -30,70 +41,143 @@ const WebSystemsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+      },
+    },
+  };
+
   return (
     <section
       id="sistemas"
-      className="py-32 relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background"
+      className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-background via-secondary/10 to-background"
     >
-      <div className="container mx-auto px-6 relative z-10" ref={ref}>
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 max-w-2xl mx-auto"
+          transition={{ duration: 0.8, type: "spring" }}
+          className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">
+              Soluções Personalizadas
+            </span>
+          </div>
+
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Sistemas{" "}
-            <span className="gradient-text bg-gradient-to-r from-primary to-primary-glow">
-              sob medida
+            <span className="relative">
+              <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
+                sob medida
+              </span>
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary/30 to-primary-glow/30 rounded-full" />
             </span>
           </h2>
-          <p className="text-muted-foreground">
-            Seu negócio é único. Seu sistema também.
+
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            Desenvolvemos soluções únicas que se adaptam perfeitamente às
+            necessidades específicas do seu negócio
           </p>
         </motion.div>
 
-        {/* Systems - Horizontal Scroll */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {/* Systems Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
           {systems.map((system, index) => (
             <motion.div
               key={system.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="flex items-center gap-3 px-6 py-4 rounded-full bg-background border border-border/30 hover:border-primary/30 transition-all cursor-pointer group"
+              variants={itemVariants}
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300 },
+              }}
+              className="group relative"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <system.icon className="w-5 h-5 text-primary" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-medium text-foreground text-sm">
+              <div className="absolute inset-0 bg-gradient-to-br from-background to-secondary/20 rounded-2xl border border-border/50 group-hover:border-primary/30 transition-all duration-300" />
+
+              <div className="relative p-6 h-full flex flex-col">
+                {/* Icon Container */}
+                <div
+                  className={`mb-6 w-16 h-16 rounded-xl bg-gradient-to-br ${system.color} p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                >
+                  <system.icon className="w-8 h-8 text-white" />
+                </div>
+
+                {/* Content */}
+                <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
                   {system.title}
                 </h3>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-muted-foreground mb-4 flex-grow">
                   {system.description}
                 </p>
+
+                {/* Hover Arrow */}
+                <div className="opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300">
+                  <ArrowRight className="w-5 h-5 text-primary" />
+                </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* CTA */}
+        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center"
         >
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary transition-all duration-300 group rounded-xl"
-          >
-            Agendar reunião
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <div className="relative inline-block">
+            {/* Button Glow Effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-primary-glow to-primary rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200" />
+
+            <Button
+              size="lg"
+              className="relative bg-gradient-to-r from-primary to-primary-glow hover:from-primary/90 hover:to-primary-glow/90 text-primary-foreground font-semibold px-10 py-7 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group rounded-xl"
+            >
+              <span className="relative z-10 flex items-center">
+                Agendar uma demonstração
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              </span>
+            </Button>
+          </div>
+
+          <p className="mt-6 text-sm text-muted-foreground">
+            Agende uma demonstração gratuita e descubra como podemos transformar
+            seu negócio
+          </p>
         </motion.div>
       </div>
     </section>

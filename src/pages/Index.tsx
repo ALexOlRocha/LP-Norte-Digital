@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ScrollPhrases from "@/components/ScrollPhrases";
@@ -14,7 +12,6 @@ import GaleriaSites from "@/components/GaleriaSites";
 import PageBotSection from "@/components/PageBotSection";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
-import AgentProvider from "@/components/AgentProvider";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -33,7 +30,6 @@ const Index = () => {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
-      {/* Seções com IDs para o agente detectar */}
       <section id="hero">
         <HeroSection />
       </section>

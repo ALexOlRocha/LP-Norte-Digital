@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import PageBotDemo from "./PageBotDemo";
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -123,13 +124,13 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button
-                size="lg"
+              <Link
+                to="/pagebot"
                 className="
     group relative overflow-hidden
     rounded-full
     bg-primary hover:bg-primary-glow
-    px-5 py-6 text-lg font-semibold
+    px-5 py-2 text-lg font-semibold
     text-primary-foreground
     transition-all duration-300
     flex items-center gap-3
@@ -158,7 +159,7 @@ const HeroSection = () => {
                 >
                   <ArrowUpRight className="w-5 h-5" />
                 </span>
-              </Button>
+              </Link>
 
               <Button
                 size="lg"
