@@ -12,6 +12,7 @@ import GaleriaSites from "@/components/GaleriaSites";
 import PageBotSection from "@/components/PageBotSection";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
+import VirtualAgentSection from "@/components/VirtualAgentSection";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ const Index = () => {
       <section id="core-products">
         <CoreProductSection />
       </section>
+      <VirtualAgentSection />
 
       <section id="services">
         <ServicesSection />

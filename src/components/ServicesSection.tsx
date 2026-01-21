@@ -7,25 +7,25 @@ import Fluxo from "./Fluxo";
 const services = [
   {
     title: "WhatsApp",
-    description: "Atendimento 24/7 automático",
+    description: "Envio em massa para engajamento",
     image:
       "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&h=400&fit=crop",
   },
   {
     title: "Tiny ERP",
-    description: "Integração completa",
+    description: "Automações de gestão e controle",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
   },
   {
-    title: "Mercado Livre",
-    description: "Vendas automatizadas",
+    title: "Sistemas webs",
+    description: "Automações personalizadas",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
   },
   {
     title: "Shopee",
-    description: "Operações otimizadas",
+    description: "Operações automatizadas de e-commerce",
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
   },
