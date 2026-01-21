@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -14,8 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        sans: ["Satoshi", "system-ui", "sans-serif"],
+        display: ["Space Grotesk", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -118,7 +123,8 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-hero": "linear-gradient(135deg, hsl(200 15% 6%) 0%, hsl(174 40% 12%) 50%, hsl(200 15% 8%) 100%)",
+        "gradient-hero":
+          "linear-gradient(135deg, hsl(200 15% 6%) 0%, hsl(174 40% 12%) 50%, hsl(200 15% 8%) 100%)",
       },
     },
   },

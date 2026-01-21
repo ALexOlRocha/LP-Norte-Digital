@@ -4,6 +4,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
+body {
+  @apply font-sans;
+}
+
 @layer base {
   :root {
     /* Norte Digital - Premium Dark Theme */
@@ -120,7 +124,6 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: "Inter", system-ui, sans-serif;
   }
 
   h1,

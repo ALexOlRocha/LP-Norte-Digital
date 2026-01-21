@@ -88,7 +88,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6"
             >
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-muted-foreground font-display">
                 Automação Inteligente
               </span>
             </motion.div>
@@ -101,7 +101,7 @@ const HeroSection = () => {
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
               Automatize seu negócio,
-              <span className="gradient-text bg-gradient-to-r from-primary to-primary-glow">
+              <span className="gradient-text bg-gradient-to-r from-primary to-primary-glow font-display">
                 converta mais e
               </span>{" "}
               escale sem esforço
