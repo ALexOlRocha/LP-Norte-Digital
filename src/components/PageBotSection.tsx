@@ -31,7 +31,7 @@ const PageBotSection = () => {
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       // Chat 3D entrance
@@ -50,7 +50,7 @@ const PageBotSection = () => {
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       // Phone mockup parallax
@@ -68,7 +68,7 @@ const PageBotSection = () => {
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       // Background shapes parallax - mais suave
@@ -146,7 +146,7 @@ const PageBotSection = () => {
             <span className="text-primary text-sm font-semibold uppercase tracking-wider">
               PageBot
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold mt-4 mb-6">
+            <h2 className="text-4xl lg:text-6xl font-bold mt-4 mb-6">
               Seu atendente
               <br />
               <span className="text-gradient">24 horas por dia</span>

@@ -79,12 +79,50 @@ const VirtualAgentSection: React.FC = () => {
               <span className="relative z-10 bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
                 agente digital
               </span>
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={isInView ? { scaleX: 1 } : {}}
-                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-                className="absolute bottom-2 left-0 right-0 h-3 bg-primary/10 -z-0 rounded-lg"
-              />
+              <svg
+                className="absolute -bottom-4 left-0 w-full h-8"
+                viewBox="0 0 400 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,20 
+                     C40,5 80,35 120,20
+                     C160,5 200,35 240,20
+                     C280,5 320,35 360,20"
+                  stroke="url(#wave-gradient)"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+                <defs>
+                  <linearGradient
+                    id="wave-gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="hsl(var(--primary))"
+                      stopOpacity="0.8"
+                    />
+                    <stop
+                      offset="50%"
+                      stopColor="hsl(var(--primary-glow))"
+                      stopOpacity="1"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="hsl(var(--primary))"
+                      stopOpacity="0.8"
+                    />
+                  </linearGradient>
+                </defs>
+              </svg>
             </span>{" "}
             estratégico,
             <span className="block mt-2">trabalhando 24h</span>
@@ -95,17 +133,6 @@ const VirtualAgentSection: React.FC = () => {
             combinando inteligência artificial com design intuitivo para uma
             experiência fluida e personalizada.
           </p>
-
-          <div className="flex flex-wrap gap-4 pt-4">
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm">Tempo real</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MessageCircle className="w-4 h-4 text-primary" />
-              <span className="text-sm">Comunicação natural</span>
-            </div>
-          </div>
         </div>
 
         {/* AGENTE */}
