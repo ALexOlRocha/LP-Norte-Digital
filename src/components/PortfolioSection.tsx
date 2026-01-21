@@ -7,29 +7,25 @@ const projects = [
     id: 1,
     title: "E-commerce Moderno",
     category: "Loja Virtual",
-    image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+    image: "/ecommerce.jpg",
   },
   {
     id: 2,
     title: "Dashboard Analytics",
     category: "Sistema Web",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    image: "/dashboard.jpg",
   },
   {
     id: 3,
     title: "App Delivery",
     category: "Landing Page",
-    image:
-      "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop",
+    image: "/app.jpg",
   },
   {
     id: 4,
     title: "Portal Imobiliário",
     category: "Site Institucional",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+    image: "/imobiliario.jpg",
   },
 ];
 
