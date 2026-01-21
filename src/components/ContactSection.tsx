@@ -42,7 +42,7 @@ const ContactSection = () => {
 
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
       toast.error(
-        "Configuração de email não encontrada. Entre em contato pelo WhatsApp."
+        "Configuração de email não encontrada. Entre em contato pelo WhatsApp.",
       );
       console.error("Credenciais do EmailJS não configuradas");
       console.log("Service ID:", EMAILJS_SERVICE_ID);
@@ -67,7 +67,7 @@ const ContactSection = () => {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams,
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
 
       console.log("Email enviado com sucesso:", result);
@@ -75,7 +75,7 @@ const ContactSection = () => {
       // Sucesso
       setIsSent(true);
       toast.success(
-        "Mensagem enviada com sucesso! Entraremos em contato em até 24h."
+        "Mensagem enviada com sucesso! Entraremos em contato em até 24h.",
       );
 
       // Limpa o formulário
@@ -94,7 +94,7 @@ const ContactSection = () => {
     } catch (error) {
       console.error("Erro ao enviar email:", error);
       toast.error(
-        "Erro ao enviar mensagem. Tente novamente ou entre em contato por WhatsApp."
+        "Erro ao enviar mensagem. Tente novamente ou entre em contato por WhatsApp.",
       );
 
       // Fallback para WhatsApp
@@ -107,7 +107,7 @@ const ContactSection = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -163,7 +163,7 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-16 px-4"
         >
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-7xl font-bold mb-3 md:mb-4">
             Vamos{" "}
             <span className="gradient-text bg-gradient-to-r from-primary to-primary-glow">
               conversar?

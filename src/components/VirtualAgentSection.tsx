@@ -53,7 +53,7 @@ const VirtualAgentSection: React.FC = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-background to-background/80"
+      className="relative min-h-screen py-8 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-background to-background/80"
     >
       {/* Grid de partículas sutis */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20" />
@@ -239,8 +239,7 @@ const VirtualAgentSection: React.FC = () => {
               "
               >
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-sm font-medium text-gray- leading-relaxed">
+                  <p className="text-sm font-medium text-gray-700 leading-relaxed">
                     {currentMessage.text}
                   </p>
                 </div>
