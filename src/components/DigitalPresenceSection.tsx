@@ -109,7 +109,7 @@ const DigitalPresenceSection = () => {
               size="lg"
               className="
       rounded-full
-      px-8 py-6
+      px-14 py-7
       text-lg font-semibold
       bg-gradient-to-r from-primary to-primary-glow
       text-primary-foreground

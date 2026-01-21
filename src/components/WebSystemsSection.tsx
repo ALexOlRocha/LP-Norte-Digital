@@ -150,7 +150,7 @@ const WebSystemsSection = () => {
             </span>
           </motion.div>
 
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight">
+          <h2 className="font-display text-5xl md:text-6xl font-bold mb-8 tracking-tight">
             Sistemas{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
@@ -339,7 +339,7 @@ const WebSystemsSection = () => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center justify-center bg-gradient-to-r from-primary to-primary-glow hover:from-primary/90 hover:to-primary-glow/90 text-primary-foreground font-bold px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transition-all duration-500 group/btn rounded-full overflow-hidden"
+              className="relative inline-flex items-center justify-center bg-gradient-to-r from-primary to-primary-glow hover:from-primary/90 hover:to-primary-glow/90 text-primary-foreground font-bold px-8 py-3 text-lg shadow-2xl hover:shadow-3xl transition-all duration-500 group/btn rounded-full overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-3">
                 <Sparkles className="w-5 h-5 animate-pulse" />
