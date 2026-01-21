@@ -152,26 +152,33 @@ const ServicesSection = () => {
               </motion.button>
             ))}
 
-            <Button
-              size="lg"
-              className="
-    w-80 max-md:w-full mt-8
-    rounded-full
-    bg-gradient-to-r from-primary to-primary-glow
-    text-primary-foreground
-    font-semibold text-lg
-    py-6
-    shadow-lg shadow-primary/30
-    transition-all duration-300 ease-out
-    hover:shadow-xl hover:shadow-primary/40
-    hover:scale-[1.02]
-    active:scale-[0.98]
-    group
-  "
+            <a
+              href="https://wa.me/5511999825835?text=Olá!%20Vim%20pelo%20site%20da%20Norte%20Digital%20e%20gostaria%20de%20automatizar%20meu%20negócio."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
             >
-              Automatizar agora
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </Button>
+              <Button
+                size="lg"
+                className="
+      w-80 max-md:w-full mt-8
+      rounded-full
+      bg-gradient-to-r from-primary to-primary-glow
+      text-primary-foreground
+      font-semibold text-lg
+      py-6
+      shadow-lg shadow-primary/30
+      transition-all duration-300 ease-out
+      hover:shadow-xl hover:shadow-primary/40
+      hover:scale-[1.02]
+      active:scale-[0.98]
+      group
+    "
+              >
+                Automatizar agora
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
+            </a>
           </motion.div>
         </div>
         <div className="py-12">
