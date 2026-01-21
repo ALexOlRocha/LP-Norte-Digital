@@ -6,15 +6,15 @@ import { ArrowRight } from "lucide-react";
 const sites = [
   {
     title: "Sites Institucionais",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    image: "/sites.jpg",
   },
   {
     title: "Landing Pages",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    image: "/landigpage.jpg",
   },
   {
     title: "E-commerce",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    image: "/ecommerce.jpg",
   },
 ];
 
@@ -53,7 +53,7 @@ const DigitalPresenceSection = () => {
               transition={{ duration: 0.6, delay: 0.1 * index }}
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-3xl aspect-[4/3]">
+              <div className="relative overflow-hidden rounded-md aspect-[4/3]">
                 {/* Browser Frame */}
                 <div className="absolute inset-0 bg-secondary/80 backdrop-blur-sm z-10 p-3">
                   {/* Browser Bar */}
@@ -65,9 +65,9 @@ const DigitalPresenceSection = () => {
                     </div>
                     <div className="flex-1 h-5 bg-background/50 rounded-full mx-2" />
                   </div>
-                  
+
                   {/* Site Preview */}
-                  <div className="relative rounded-xl overflow-hidden h-[calc(100%-2rem)]">
+                  <div className="relative rounded-lg overflow-hidden h-[calc(100%-2rem)]">
                     <motion.img
                       src={site.image}
                       alt={site.title}
@@ -79,9 +79,9 @@ const DigitalPresenceSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Title */}
-              <motion.h3 
+              <motion.h3
                 className="font-display text-xl font-semibold mt-6 text-center text-foreground"
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}

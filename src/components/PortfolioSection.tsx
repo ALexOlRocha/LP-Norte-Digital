@@ -5,9 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "E-commerce Moderno",
-    category: "Loja Virtual",
-    image: "/ecommerce.jpg",
+    title: "Sistemas personalizados",
+    category: "Sistema Web",
+    image: "/sistemas.jpg",
   },
   {
     id: 2,

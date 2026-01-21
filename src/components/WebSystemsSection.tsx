@@ -114,7 +114,7 @@ const WebSystemsSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {systems.map((system, index) => (
+          {systems.map((system) => (
             <motion.div
               key={system.title}
               variants={itemVariants}
