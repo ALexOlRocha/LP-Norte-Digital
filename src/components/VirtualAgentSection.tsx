@@ -74,10 +74,10 @@ const VirtualAgentSection: React.FC = () => {
           </div>
 
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Seu{" "}
+            Conheça{" "}
             <span className="relative">
               <span className="relative z-10 bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                agente digital
+                NØRA
               </span>
               <svg
                 className="absolute -bottom-4 left-0 w-full h-8"
@@ -124,7 +124,7 @@ const VirtualAgentSection: React.FC = () => {
                 </defs>
               </svg>
             </span>{" "}
-            estratégico,
+            seu agente estratégico,
             <span className="block mt-2">trabalhando 24h</span>
           </h2>
 
@@ -148,7 +148,7 @@ const VirtualAgentSection: React.FC = () => {
                 : {}
             }
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-r from-primary/10 via-primary-glow/10 to-primary/10 blur-3xl"
+            className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-r from-primary/60 via-primary-glow/60 to-primary/60 blur-3xl"
           />
 
           <motion.div
@@ -236,6 +236,25 @@ const VirtualAgentSection: React.FC = () => {
                   }}
                 />
               ))}
+
+              {/* Iniciais no centro */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={isAgentActive ? { opacity: 1 } : {}}
+                  transition={{ delay: 1 }}
+                  className="text-center"
+                >
+                  <div className="text-6xl md:text-7xl font-black bg-gradient-to-b from-white to-primary-glow bg-clip-text text-transparent">
+                    <div>
+                      <p className="text-sm font-medium text-white/90 mb-1">
+                        Agente Digital
+                      </p>
+                      <p className="text-2xl font-bold text-white/95">NØRA</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
 
@@ -266,6 +285,9 @@ const VirtualAgentSection: React.FC = () => {
               "
               >
                 <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-primary to-primary-glow flex items-center justify-center">
+                    <span className="text-xs font-bold text-white">N</span>
+                  </div>
                   <p className="text-sm font-medium text-gray-700 leading-relaxed">
                     {currentMessage.text}
                   </p>
@@ -275,7 +297,7 @@ const VirtualAgentSection: React.FC = () => {
                 <motion.div
                   animate={{ opacity: [0.3, 1, 0.3] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
-                  className="flex gap-1 mt-3 ml-5"
+                  className="flex gap-1 mt-3 ml-9"
                 >
                   {[...Array(3)].map((_, i) => (
                     <motion.div
@@ -293,7 +315,7 @@ const VirtualAgentSection: React.FC = () => {
               </div>
 
               {/* Sombra do balão */}
-              <div className="absolute  inset-0 -z-10 bg-black/80 blur-xl rounded-2xl" />
+              <div className="absolute inset-0 -z-10 bg-black/80 blur-xl rounded-2xl" />
             </motion.div>
           </AnimatePresence>
         </div>
