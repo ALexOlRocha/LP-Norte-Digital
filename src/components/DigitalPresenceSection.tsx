@@ -100,13 +100,31 @@ const DigitalPresenceSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary transition-all duration-300 group rounded-xl"
+          <a
+            href="https://wa.me/5511999825835?text=Ol%C3%A1!%20%F0%9F%91%8B%20Vim%20pelo%20site%20da%20Norte%20Digital%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20do%20meu%20site."
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Criar meu site
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+            <Button
+              size="lg"
+              className="
+      rounded-full
+      px-8 py-6
+      text-lg font-semibold
+      bg-gradient-to-r from-primary to-primary-glow
+      text-primary-foreground
+      shadow-lg shadow-primary/30
+      transition-all duration-300
+      hover:scale-[1.03]
+      hover:shadow-xl hover:shadow-primary/40
+      active:scale-[0.97]
+      group
+    "
+            >
+              Criar meu site
+              <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>
