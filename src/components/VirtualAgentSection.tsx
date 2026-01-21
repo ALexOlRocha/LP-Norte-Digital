@@ -284,18 +284,6 @@ const VirtualAgentSection: React.FC = () => {
               <div className="absolute  inset-0 -z-10 bg-black/80 blur-xl rounded-2xl" />
             </motion.div>
           </AnimatePresence>
-
-          {/* Indicador de status */}
-          <motion.div
-            animate={isAgentActive ? { scale: [1, 1.1, 1] } : {}}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="absolute -bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20"
-          >
-            <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-xs font-medium text-foreground/80">
-              Agente ativo
-            </span>
-          </motion.div>
         </div>
       </motion.div>
 
