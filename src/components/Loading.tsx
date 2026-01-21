@@ -28,7 +28,7 @@ export default function Loading() {
         transition={{ duration: 0.6, delay: 1.4 }}
         className="relative z-10 flex h-screen w-screen items-center  justify-center bg-linear-to-br from-black to-gray-900"
       >
-        <h1 className="text-4xl tracking-[0.7em] text-white text-center mx-auto font-bold">
+        <h1 className="text-5xl tracking-[0.7em] text-white text-center mx-auto font-bold">
           NORTE DIGITAL
         </h1>
       </motion.div>
