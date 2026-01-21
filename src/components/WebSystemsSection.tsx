@@ -104,8 +104,8 @@ const WebSystemsSection = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:10rem_10rem] [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_70%)] opacity-[0.03]" />
 
         {/* Glow effects */}
-        <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -left-40 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 -left-40 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-pulse delay-1000" />
 
         {/* Floating elements */}
         <div className="absolute top-20 right-1/4 w-4 h-4 bg-primary/20 rounded-full animate-float" />
