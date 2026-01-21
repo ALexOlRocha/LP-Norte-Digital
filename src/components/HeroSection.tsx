@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import PageBotDemo from "./PageBotDemo";
 import { Link } from "react-router-dom";
 import { useRef } from "react";

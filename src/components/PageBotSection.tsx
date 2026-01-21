@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Bot, Send, User } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Bot, Send, User } from "lucide-react";
+
+import { Link } from "react-router-dom";
 import abstractShapes from "@/assets/abstract-shapes.png";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -155,9 +156,50 @@ const PageBotSection = () => {
               Automatize seu atendimento, qualifique leads e gere orçamentos
               automáticos enquanto você foca no que importa.
             </p>
-            <Button variant="link" size="lg">
-              Quero um PageBot
-            </Button>
+            <div className="w-50">
+              <a
+                href="https://wa.me/5511999825835?text=Olá!%20Vim%20pelo%20site%20da%20Norte%20Digital%20e%20gostaria%20de%20criar%20um%20PageBot%20para%20meu%20negócio."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+      group relative inline-flex items-center gap-3
+      rounded-full
+      bg-primary hover:bg-primary-glow
+      px-6 py-2
+      text-lg font-semibold
+      text-primary-foreground
+      transition-all duration-300
+      shadow-lg hover:shadow-primary/40
+      hover:scale-[1.03]
+      active:scale-[0.97]
+    "
+              >
+                {/* Glow interno */}
+                <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
+
+                {/* Texto */}
+                <span className="relative z-10 whitespace-nowrap">
+                  Quero um PageBot
+                </span>
+
+                {/* Ícone */}
+                <span
+                  className="
+        relative z-10
+        w-9 h-9
+        flex items-center justify-center
+        rounded-full
+        bg-black/80
+        text-white
+        transition-all duration-300
+        group-hover:translate-x-1
+        group-hover:bg-black
+      "
+                >
+                  <ArrowUpRight className="w-5 h-5" />
+                </span>
+              </a>
+            </div>
           </div>
 
           {/* Chat Demo with 3D effect */}
