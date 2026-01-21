@@ -155,7 +155,7 @@ const ServicesSection = () => {
             <Button
               size="lg"
               className="
-    w-80 mt-8
+    w-80 max-md:w-full mt-8
     rounded-full
     bg-gradient-to-r from-primary to-primary-glow
     text-primary-foreground
