@@ -84,8 +84,17 @@ const Navbar = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button className="relative overflow-hidden rounded-full px-6 bg-primary text-white font-semibold hover:bg-[#1F5F5C]/90 transition-all shadow-[0_0_0_0_rgba(16, 185, 92, 0.6)] hover:shadow-[0_0_40px_8px_rgba(16,185,129,0.35)]">
-              Orçamento
+            <Button
+              asChild
+              className="relative overflow-hidden rounded-full px-6 bg-primary text-white font-semibold hover:bg-[#1F5F5C]/90 transition-all shadow-[0_0_0_0_rgba(16,185,92,0.6)] hover:shadow-[0_0_40px_8px_rgba(16,185,129,0.35)]"
+            >
+              <a
+                href="https://wa.me/5511999825835?text=Quero%20solicitar%20um%20orçamento"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Orçamento
+              </a>
             </Button>
           </div>
 
