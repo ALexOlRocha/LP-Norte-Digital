@@ -174,7 +174,7 @@ const VirtualAgentSection: React.FC = () => {
               className="
               relative w-full h-full
               rounded-full
-              bg-gradient-to-br from-white/90 via-white/60 to-white/20
+              bg-gradient-to-br from-primary to-white/20
               backdrop-blur-2xl
               border border-white/40
               shadow-2xl
@@ -182,7 +182,7 @@ const VirtualAgentSection: React.FC = () => {
             "
             >
               {/* Reflexo */}
-              <div className="absolute top-0 left-1/4 w-1/2 h-1/3 bg-gradient-to-b from-white/60 to-transparent blur-sm rounded-full" />
+              <div className="absolute top-0 left-1/4 w-1/2 h-1/3 bg-gradient-to-b from-white/70 to-transparent blur-sm rounded-full" />
 
               {/* Partículas flutuantes */}
               {[...Array(3)].map((_, i) => (
@@ -210,20 +210,6 @@ const VirtualAgentSection: React.FC = () => {
                 />
               ))}
             </div>
-
-            {/* Pontos de conexão */}
-            <motion.div
-              animate={
-                isAgentActive
-                  ? {
-                      scale: [1, 1.2, 1],
-                      opacity: [0.5, 1, 0.5],
-                    }
-                  : {}
-              }
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-primary rounded-full"
-            />
           </motion.div>
 
           {/* BALÕES DE FALA */}
