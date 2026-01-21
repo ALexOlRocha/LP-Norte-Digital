@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 
 export default function Loading() {
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden">
+    <div className="fixed inset-0 z-50 overflow-hidden bg-transparent flex items-center justify-center  ">
+      {/* Background Gradient Overlay - Mais sutil */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background" />
+
+      {/* Background Pattern Overlay - Para textura suave */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+
       {/* Painel Esquerdo */}
       <motion.div
         initial={{ x: 0 }}
@@ -28,6 +34,11 @@ export default function Loading() {
         transition={{ duration: 0.6, delay: 1.4 }}
         className="relative z-10 flex h-screen w-screen items-center  justify-center bg-linear-to-br from-black to-gray-900"
       >
+        {" "}
+        {/* Background Gradient Overlay - Mais sutil */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background" />
+        {/* Background Pattern Overlay - Para textura suave */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
         <h1 className="text-5xl tracking-[0.7em] text-white text-center mx-auto font-bold">
           NORTE DIGITAL
         </h1>
