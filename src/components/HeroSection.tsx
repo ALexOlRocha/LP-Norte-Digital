@@ -162,11 +162,12 @@ const HeroSection = () => {
               </Link>
 
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="border-border/50 rounded-full bg-white/25 hover:bg-secondary text-foreground font-semibold px-8 py-6 text-lg transition-all duration-300"
               >
-                Ver soluções
+                <a href="#sistemas">Ver soluções</a>
               </Button>
             </motion.div>
           </motion.div>
