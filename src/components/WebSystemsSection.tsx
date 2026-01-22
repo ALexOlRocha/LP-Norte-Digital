@@ -98,6 +98,44 @@ const WebSystemsSection = () => {
       id="sistemas"
       className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-background via-background to-secondary/5"
     >
+      <svg
+        className="absolute -bottom-0 left-0 w-full h-8"
+        viewBox="0 0 400 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,20 
+                     C40,5 80,35 120,20
+                     C160,5 200,35 240,20
+                     C280,5 320,35 360,20"
+          stroke="url(#wave-gradient)"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+        <defs>
+          <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop
+              offset="0%"
+              stopColor="hsl(var(--primary))"
+              stopOpacity="0.8"
+            />
+            <stop
+              offset="50%"
+              stopColor="hsl(var(--primary-glow))"
+              stopOpacity="1"
+            />
+            <stop
+              offset="100%"
+              stopColor="hsl(var(--primary))"
+              stopOpacity="0.8"
+            />
+          </linearGradient>
+        </defs>
+      </svg>
       {/* Background Elements mais elaborados */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Grid pattern sutil */}
@@ -377,50 +415,6 @@ const WebSystemsSection = () => {
             </a>
           </div>
         </motion.div>
-        <svg
-          className="absolute -bottom-20 left-0 w-full h-8"
-          viewBox="0 0 400 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,20 
-                     C40,5 80,35 120,20
-                     C160,5 200,35 240,20
-                     C280,5 320,35 360,20"
-            stroke="url(#wave-gradient)"
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-          />
-          <defs>
-            <linearGradient
-              id="wave-gradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-            >
-              <stop
-                offset="0%"
-                stopColor="hsl(var(--primary))"
-                stopOpacity="0.8"
-              />
-              <stop
-                offset="50%"
-                stopColor="hsl(var(--primary-glow))"
-                stopOpacity="1"
-              />
-              <stop
-                offset="100%"
-                stopColor="hsl(var(--primary))"
-                stopOpacity="0.8"
-              />
-            </linearGradient>
-          </defs>
-        </svg>
       </div>
     </section>
   );
