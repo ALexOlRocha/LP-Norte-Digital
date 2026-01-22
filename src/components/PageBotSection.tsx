@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Bot, Send, User } from "lucide-react";
 
-import { Link } from "react-router-dom";
 import abstractShapes from "@/assets/abstract-shapes.png";
 
 gsap.registerPlugin(ScrollTrigger);

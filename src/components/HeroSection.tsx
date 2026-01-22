@@ -141,7 +141,7 @@ const HeroSection = () => {
                 <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition" />
 
                 {/* Texto */}
-                <span className="relative z-10">Quero um PageBot</span>
+                <span className="relative z-10">Falar com a NØRA </span>
 
                 {/* Ícone */}
                 <span
