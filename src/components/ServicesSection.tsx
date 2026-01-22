@@ -14,20 +14,17 @@ const services = [
   {
     title: "Tiny ERP",
     description: "Automações de gestão e controle",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    image: "/tiny-erp-banner.jpg",
   },
   {
     title: "Sistemas webs",
     description: "Automações personalizadas",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    image: "/automacoes.jpg",
   },
   {
     title: "Shopee",
     description: "Operações automatizadas de e-commerce",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
+    image: "/shopee.jpg",
   },
 ];
 
