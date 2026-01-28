@@ -17,8 +17,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "App Delivery",
-    category: "Landing Page",
+    title: "Apps",
+    category: "Aplicativo software",
     image: "/app.jpg",
   },
   {

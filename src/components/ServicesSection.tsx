@@ -6,25 +6,39 @@ import Fluxo from "./Fluxo";
 
 const services = [
   {
-    title: "WhatsApp",
-    description: "Envio em massa para engajamento",
+    title: "Agendamento Automático",
+    description:
+      "O cliente escolhe data e horário direto no chat. Sem conflitos, sem troca de mensagens.",
     image:
-      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
   },
   {
-    title: "Tiny ERP",
-    description: "Automações de gestão e controle",
-    image: "/tiny-erp-banner.jpg",
+    title: "Sistema de Orçamento",
+    description:
+      "A IA faz perguntas, entende a necessidade do cliente e gera orçamentos automaticamente.",
+    image:
+      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop",
   },
   {
-    title: "Sistemas webs",
-    description: "Automações personalizadas",
-    image: "/automacoes.jpg",
+    title: "Vitrine & Produtos no Chat",
+    description:
+      "O chat muda para modo vitrine e apresenta produtos, serviços, imagens e catálogos.",
+    image:
+      "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?w=600&h=400&fit=crop",
   },
   {
-    title: "Shopee",
-    description: "Operações automatizadas de e-commerce",
-    image: "/shopee.jpg",
+    title: "Checkout Conversacional",
+    description:
+      "Carrinho, pagamento e fechamento da venda sem sair da conversa.",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Documentos Inteligentes",
+    description:
+      "Envio, leitura e resumo automático de PDFs, contratos e arquivos enviados pelo cliente.",
+    image:
+      "https://images.unsplash.com/photo-1581091870627-3c8c1c6c0a5b?w=600&h=400&fit=crop",
   },
 ];
 

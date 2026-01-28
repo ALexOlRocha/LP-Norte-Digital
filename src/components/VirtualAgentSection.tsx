@@ -69,7 +69,7 @@ const VirtualAgentSection: React.FC = () => {
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">
-              Agente Inteligente
+              Já automatizou o atendimento?
             </span>
           </div>
 

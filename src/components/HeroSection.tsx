@@ -89,7 +89,7 @@ const HeroSection = () => {
             >
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm text-muted-foreground font-display">
-                Automação Inteligente
+                Automação que gera vendas
               </span>
             </motion.div>
 
@@ -100,11 +100,12 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              Automatize seu negócio,
+              Automação que
               <span className="gradient-text bg-gradient-to-r from-primary to-primary-glow font-display">
-                converta mais e
-              </span>{" "}
-              escale sem esforço
+                {" "}
+                vende por você{" "}
+              </span>
+              enquanto seu negócio cresce
             </motion.h1>
 
             {/* Subheadline */}
@@ -112,9 +113,10 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Soluções digitais que trabalham por você 24h por dia.
+              Automatize atendimento, qualifique leads e gere orçamentos
+              automáticos com sistemas inteligentes trabalhando 24h por dia.
             </motion.p>
 
             {/* CTAs */}
@@ -141,7 +143,7 @@ const HeroSection = () => {
                 <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition" />
 
                 {/* Texto */}
-                <span className="relative z-10">Falar com a NØRA </span>
+                <span className="relative z-10">Quero automatizar agora </span>
 
                 {/* Ícone */}
                 <span

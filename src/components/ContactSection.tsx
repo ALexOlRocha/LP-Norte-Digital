@@ -410,7 +410,7 @@ const ContactSection = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-secondary/50 flex items-center justify-center text-muted-foreground transition-all duration-300 ${
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full  bg-secondary/50 flex items-center justify-center text-muted-foreground transition-all duration-300 ${
                       social.color
                     } ${isLoading ? "opacity-50 pointer-events-none" : ""}`}
                     whileHover={{ scale: 1.1 }}

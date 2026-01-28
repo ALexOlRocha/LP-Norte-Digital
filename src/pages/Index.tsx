@@ -13,6 +13,7 @@ import PageBotSection from "@/components/PageBotSection";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 import VirtualAgentSection from "@/components/VirtualAgentSection";
+import SectionPageBot from "@/components/SectionPageBot";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,9 @@ const Index = () => {
 
       <ScrollPhrases />
 
+      <section id="whatsapp-bot">
+        <SectionPageBot />
+      </section>
       <section id="whatsapp-bot">
         <PageBotSection />
       </section>

@@ -7,9 +7,23 @@ import {
   ExternalLink,
   Check,
   Sparkles,
+  Globe,
+  Bot,
+  Zap,
+  FileText,
+  ShoppingCart,
+  Calendar,
+  Users,
 } from "lucide-react";
 
-type MessageType = "text" | "image" | "options" | "quote" | "qrcode" | "cta";
+type MessageType =
+  | "text"
+  | "image"
+  | "options"
+  | "quote"
+  | "qrcode"
+  | "cta"
+  | "service";
 
 interface Message {
   id: number;
@@ -19,6 +33,7 @@ interface Message {
   options?: string[];
   image?: string;
   price?: number;
+  service?: ServiceType;
 }
 
 interface ConversationStep {
@@ -29,77 +44,168 @@ interface ConversationStep {
   image?: string;
   price?: number;
   delay?: number;
+  service?: ServiceType;
 }
+
+type ServiceType =
+  | "chatbot"
+  | "landing-page"
+  | "automation"
+  | "budget"
+  | "whatsapp"
+  | "all";
+
+interface ServiceInfo {
+  id: ServiceType;
+  name: string;
+  description: string;
+  price: number;
+  features: string[];
+  icon: React.ReactNode;
+  image: string;
+}
+
 const SIZE = 21;
+
+const services: ServiceInfo[] = [
+  {
+    id: "chatbot",
+    name: "Chatbot com IA",
+    description: "Atendimento automático 24/7 com inteligência artificial",
+    price: 897,
+    features: [
+      "Responde perguntas automaticamente",
+      "Aprende com conversas anteriores",
+      "Integração com múltiplos canais",
+      "Análise de sentimentos",
+    ],
+    icon: <Bot className="w-5 h-5" />,
+    image:
+      "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop",
+  },
+  {
+    id: "landing-page",
+    name: "Página de Vendas",
+    description: "Landing pages que convertem visitantes em clientes",
+    price: 1297,
+    features: [
+      "Design otimizado para conversão",
+      "Mobile-first responsivo",
+      "Integração com analytics",
+      "Testes A/B integrados",
+    ],
+    icon: <Globe className="w-5 h-5" />,
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop",
+  },
+  {
+    id: "automation",
+    name: "Automações",
+    description: "Automatize processos e ganhe tempo",
+    price: 997,
+    features: [
+      "Agendamento automático",
+      "Fluxos de trabalho",
+      "Integração com CRM",
+      "Notificações inteligentes",
+    ],
+    icon: <Zap className="w-5 h-5" />,
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+  },
+  {
+    id: "budget",
+    name: "Sistema de Orçamento",
+    description: "Gere orçamentos profissionais automaticamente",
+    price: 697,
+    features: [
+      "Modelos personalizáveis",
+      "Aprovação digital",
+      "Pagamento integrado",
+      "Relatórios detalhados",
+    ],
+    icon: <FileText className="w-5 h-5" />,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop",
+  },
+  {
+    id: "whatsapp",
+    name: "Automação WhatsApp",
+    description: "Atendimento e vendas pelo WhatsApp",
+    price: 797,
+    features: [
+      "Mensagens automáticas",
+      "Respostas rápidas",
+      "Catalogo integrado",
+      "Multi-atendentes",
+    ],
+    icon: <MessageCircle className="w-5 h-5" />,
+    image:
+      "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=250&fit=crop",
+  },
+  {
+    id: "all",
+    name: "Pacote Completo",
+    description: "Todas as soluções integradas",
+    price: 3497,
+    features: [
+      "Todos os serviços acima",
+      "Integração total",
+      "Suporte prioritário",
+      "Treinamento completo",
+      "Desconto especial",
+    ],
+    icon: <ShoppingCart className="w-5 h-5" />,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+  },
+];
 
 const conversationFlow: ConversationStep[] = [
   // Apresentação
   {
     type: "text",
-    content: "Olá! 👋 Sou o atendende da Norte Digital",
+    content: "Olá! 👋 Sou o atendente da Norte Digital",
     isBot: true,
     delay: 800,
   },
   {
     type: "text",
     content:
-      "Transformamos negócios com automação inteligente. Como posso te ajudar hoje?",
+      "Oferecemos soluções completas de automação para seu negócio. Como posso te ajudar hoje?",
     isBot: true,
     delay: 1200,
   },
 
-  // Descoberta
+  // Menu Principal de Serviços
   {
     type: "options",
-    content: "Escolha uma opção:",
+    content: "Selecione um serviço para saber mais:",
     isBot: true,
-    options: ["Quero automatizar", "Ver soluções", "Falar com humano"],
+    options: [
+      "🤖 Chatbot com IA",
+      "🌐 Página de Vendas",
+      "⚡ Automações",
+      "💰 Sistema de Orçamento",
+      "💬 WhatsApp Automático",
+      "🎯 Ver Pacote Completo",
+      "👤 Falar com humano",
+    ],
     delay: 1000,
   },
-  { type: "text", content: "Quero automatizar", isBot: false, delay: 1500 },
+  { type: "text", content: "🤖 Chatbot com IA", isBot: false, delay: 1500 },
 
-  // Apresentação do Produto
-  { type: "text", content: "Excelente escolha! 🚀", isBot: true, delay: 800 },
+  // Detalhes do Chatbot
   {
-    type: "image",
-    content:
-      "Nossa PageBot atende 24h, qualifica leads e gera orçamentos automáticos:",
-    image:
-      "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop",
+    type: "service",
+    content: "",
     isBot: true,
-    delay: 1500,
-  },
-
-  // Benefícios
-  {
-    type: "text",
-    content: "✅ Atendimento 24/7 sem pausas",
-    isBot: true,
-    delay: 600,
-  },
-  {
-    type: "text",
-    content: "✅ Qualificação automática de leads",
-    isBot: true,
-    delay: 600,
-  },
-  {
-    type: "text",
-    content: "✅ Orçamentos gerados instantaneamente",
-    isBot: true,
-    delay: 600,
-  },
-  {
-    type: "text",
-    content: "✅ Integração com WhatsApp",
-    isBot: true,
+    service: "chatbot",
     delay: 800,
   },
-
-  // Orçamento
   {
     type: "text",
-    content: "Posso preparar um orçamento personalizado para você?",
+    content: "Deseja ver mais detalhes sobre este serviço?",
     isBot: true,
     delay: 1000,
   },
@@ -107,24 +213,108 @@ const conversationFlow: ConversationStep[] = [
     type: "options",
     content: "",
     isBot: true,
-    options: ["Sim, quero ver!", "Mais informações"],
+    options: ["Ver orçamento", "Ver outro serviço", "Falar com humano"],
     delay: 500,
   },
-  { type: "text", content: "Sim, quero ver!", isBot: false, delay: 1500 },
+  { type: "text", content: "Ver orçamento", isBot: false, delay: 1500 },
 
-  // Mostra orçamento
+  // Orçamento do Chatbot
+  {
+    type: "quote",
+    content: "Chatbot com IA - Setup Completo",
+    price: 897,
+    isBot: true,
+    delay: 1500,
+  },
+
+  // Opção de ver outros serviços
   {
     type: "text",
-    content: "Preparando seu orçamento personalizado... ✨",
+    content: "Gostaria de ver outros serviços que oferecemos?",
+    isBot: true,
+    delay: 1000,
+  },
+  {
+    type: "options",
+    content: "",
+    isBot: true,
+    options: ["Sim, mostrar tudo", "Não, apenas este"],
+    delay: 500,
+  },
+  { type: "text", content: "Sim, mostrar tudo", isBot: false, delay: 1500 },
+
+  // Mostrar todos os serviços
+  {
+    type: "text",
+    content: "Aqui estão todos os nossos serviços disponíveis:",
+    isBot: true,
+    delay: 800,
+  },
+  {
+    type: "service",
+    content: "",
+    isBot: true,
+    service: "landing-page",
+    delay: 800,
+  },
+  {
+    type: "service",
+    content: "",
+    isBot: true,
+    service: "automation",
+    delay: 800,
+  },
+  {
+    type: "service",
+    content: "",
+    isBot: true,
+    service: "budget",
+    delay: 800,
+  },
+  {
+    type: "service",
+    content: "",
+    isBot: true,
+    service: "whatsapp",
+    delay: 800,
+  },
+  {
+    type: "service",
+    content: "",
+    isBot: true,
+    service: "all",
+    delay: 1000,
+  },
+
+  // Pergunta final
+  {
+    type: "text",
+    content:
+      "Qual serviço mais te interessou? Posso gerar um orçamento detalhado.",
     isBot: true,
     delay: 1200,
   },
   {
-    type: "quote",
-    content: "PageBot Completo",
-    price: 1497,
+    type: "options",
+    content: "",
     isBot: true,
-    delay: 2000,
+    options: [
+      "Pacote Completo",
+      "Chatbot com IA",
+      "Landing Page",
+      "Ver todos os preços",
+    ],
+    delay: 800,
+  },
+  { type: "text", content: "Pacote Completo", isBot: false, delay: 1500 },
+
+  // Orçamento do Pacote Completo
+  {
+    type: "quote",
+    content: "Pacote Completo Norte Digital",
+    price: 3497,
+    isBot: true,
+    delay: 1500,
   },
 
   // Pagamento
@@ -145,7 +335,7 @@ const conversationFlow: ConversationStep[] = [
   // CTA Final
   {
     type: "text",
-    content: "Prefere falar com nossa equipe? 💬",
+    content: "Prefere falar diretamente com nossa equipe? 💬",
     isBot: true,
     delay: 1000,
   },
@@ -181,7 +371,6 @@ const PageBotDemo = () => {
 
   useEffect(() => {
     if (currentStep >= conversationFlow.length) {
-      // Reset after complete flow
       const resetTimer = setTimeout(() => {
         setMessages([]);
         setCurrentStep(0);
@@ -196,7 +385,7 @@ const PageBotDemo = () => {
     if (step.isBot) {
       setIsTyping(true);
 
-      if (step.type === "image") {
+      if (step.type === "image" || step.type === "service") {
         setIsImageLoading(true);
       }
 
@@ -218,6 +407,7 @@ const PageBotDemo = () => {
             options: step.options,
             image: step.image,
             price: step.price,
+            service: step.service,
           },
         ]);
         setCurrentStep((prev) => prev + 1);
@@ -242,6 +432,59 @@ const PageBotDemo = () => {
     }
   }, [currentStep]);
 
+  const renderServiceCard = (service: ServiceInfo) => {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.02, y: -2 }}
+        className="bg-secondary/50 border border-border/30 rounded-xl p-4 space-y-3 cursor-pointer transition-all"
+      >
+        <div className="flex items-start justify-between">
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-lg bg-primary/20 text-primary">
+              {service.icon}
+            </div>
+            <div>
+              <h4 className="font-semibold text-foreground">{service.name}</h4>
+              <p className="text-xs text-muted-foreground">
+                {service.description}
+              </p>
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="text-lg font-bold gradient-text">
+              R$ {service.price}
+            </div>
+            <div className="text-xs text-muted-foreground">à vista</div>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <div className="flex flex-wrap gap-1.5">
+            {service.features.map((feature, idx) => (
+              <span
+                key={idx}
+                className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-full"
+              >
+                {feature}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {service.id === "all" && (
+          <div className="pt-2 border-t border-border/20">
+            <div className="flex items-center gap-2 text-green-400 text-sm">
+              <Check className="w-4 h-4" />
+              <span>Economize 30% com o pacote completo</span>
+            </div>
+          </div>
+        )}
+      </motion.div>
+    );
+  };
+
   const renderMessage = (message: Message) => {
     switch (message.type) {
       case "image":
@@ -259,6 +502,27 @@ const PageBotDemo = () => {
                 className="w-full h-32 object-cover"
               />
             </motion.div>
+          </div>
+        );
+
+      case "service":
+        const serviceInfo = services.find((s) => s.id === message.service);
+        if (!serviceInfo) return null;
+
+        return (
+          <div className="space-y-3">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="rounded-xl overflow-hidden border border-border/30"
+            >
+              <img
+                src={serviceInfo.image}
+                alt={serviceInfo.name}
+                className="w-full h-32 object-cover"
+              />
+            </motion.div>
+            {renderServiceCard(serviceInfo)}
           </div>
         );
 
@@ -367,9 +631,9 @@ const PageBotDemo = () => {
                       animate={{ scale: 1 }}
                       transition={{ delay: i * 0.002 }}
                       className={`
-                  aspect-square
-                  ${isDark ? "bg-black" : "bg-white"}
-                `}
+                        aspect-square
+                        ${isDark ? "bg-black" : "bg-white"}
+                      `}
                     />
                   );
                 })}
@@ -379,10 +643,11 @@ const PageBotDemo = () => {
             <p className="text-[11px] text-gray-600">Escaneie para pagar</p>
           </motion.div>
         );
+
       case "cta":
         return (
           <motion.a
-            href="https://wa.me/5511999999999?text=Olá! Vim pelo site e gostaria de saber mais sobre o PageBot"
+            href="https://wa.me/5511999999999?text=Olá! Vim pelo site e gostaria de saber mais sobre os serviços da Norte Digital"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 10 }}
@@ -532,7 +797,7 @@ const PageBotDemo = () => {
                             className="w-4 h-4 border-2 border-primary/30 border-t-primary rounded-full"
                           />
                           <span className="text-xs text-muted-foreground">
-                            Enviando imagem...
+                            Carregando serviço...
                           </span>
                         </>
                       ) : (

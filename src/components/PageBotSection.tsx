@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Bot, Send, User } from "lucide-react";
 
 import abstractShapes from "@/assets/abstract-shapes.png";
+import ChatbotPage from "./bot";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -201,112 +202,7 @@ const PageBotSection = () => {
             </div>
           </div>
 
-          {/* Chat Demo with 3D effect */}
-          <div className="relative" style={{ transformStyle: "preserve-3d" }}>
-            {/* Phone Mockup - positioned behind */}
-            <div
-              ref={phoneRef}
-              className="absolute -right-20 -top-10 w-48 opacity-60 hidden lg:block"
-              style={{ transform: "translateZ(-50px)" }}
-            ></div>
-
-            <div
-              ref={chatRef}
-              className="card-premium p-4 max-w-md mx-auto lg:mx-0 relative z-10"
-              style={{
-                transformStyle: "preserve-3d",
-                boxShadow:
-                  "0 25px 50px -12px hsl(174 62% 35% / 0.25), 0 0 0 1px hsl(174 62% 35% / 0.1)",
-              }}
-            >
-              {/* Chat Header */}
-              <div className="flex items-center gap-3 pb-4 border-b border-border">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Norte Digital</p>
-                  <p className="text-xs text-primary">Online</p>
-                </div>
-                <div className="ml-auto flex gap-1">
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                </div>
-              </div>
-
-              {/* Chat Messages */}
-              <div className="py-6 space-y-4 min-h-[300px]">
-                {/* Bot Message */}
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center">
-                    <Bot className="w-4 h-4 text-primary" />
-                  </div>
-                  <div className="bg-secondary rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]">
-                    <p className="text-foreground text-sm">
-                      Olá! 👋 Sou o atendente da Norte Digital
-                    </p>
-                    <p className="text-muted-foreground text-sm mt-2">
-                      Transformamos negócios com automação inteligente. Como
-                      posso te ajudar hoje?
-                    </p>
-                  </div>
-                </div>
-
-                {/* Quick Actions */}
-                <div className="flex flex-wrap gap-2 pl-11">
-                  <button className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-sm text-primary hover:bg-primary/20 hover:scale-105 transition-all duration-300">
-                    Quero automatizar
-                  </button>
-                  <button className="px-4 py-2 bg-secondary border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:scale-105 transition-all duration-300">
-                    Ver soluções
-                  </button>
-                  <button className="px-4 py-2 bg-secondary border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:scale-105 transition-all duration-300">
-                    Falar com humano
-                  </button>
-                </div>
-
-                {/* User Response */}
-                {showResponse && (
-                  <>
-                    <div className="flex gap-3 justify-end animate-fade-in">
-                      <div className="bg-primary rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
-                        <p className="text-primary-foreground text-sm">
-                          Quero automatizar
-                        </p>
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-secondary flex-shrink-0 flex items-center justify-center">
-                        <User className="w-4 h-4 text-muted-foreground" />
-                      </div>
-                    </div>
-
-                    {/* Bot Response */}
-                    <div className="flex gap-3 animate-fade-in">
-                      <div className="w-8 h-8 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center">
-                        <Bot className="w-4 h-4 text-primary" />
-                      </div>
-                      <div className="bg-secondary rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]">
-                        <p className="text-foreground text-sm">
-                          Perfeito! Nossa PageBot atende 24h, qualifica leads e
-                          gera orçamentos automáticos. 🚀
-                        </p>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-
-              {/* Chat Input */}
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <input
-                  type="text"
-                  placeholder="Digite sua mensagem..."
-                  className="flex-1 bg-secondary border-none rounded-full px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                />
-                <button className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground hover:bg-primary/90 hover:scale-110 transition-all duration-300">
-                  <Send className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
+          <ChatbotPage />
         </div>
       </div>
     </section>
