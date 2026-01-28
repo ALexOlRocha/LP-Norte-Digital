@@ -39,7 +39,7 @@ export default function Loading() {
         <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background" />
         {/* Background Pattern Overlay - Para textura suave */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
-        <h1 className="text-5xl tracking-[0.7em] text-white text-center mx-auto font-bold">
+        <h1 className="md:text-5xl text-3xl tracking-[0.7em] text-white text-center justify-center mx-auto font-bold">
           NORTE DIGITAL
         </h1>
       </motion.div>
