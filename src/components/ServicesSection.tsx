@@ -22,22 +22,19 @@ const services = [
     title: "Vitrine & Produtos no Chat",
     description:
       "O chat muda para modo vitrine e apresenta produtos, serviços, imagens e catálogos.",
-    image:
-      "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?w=600&h=400&fit=crop",
+    image: "/e-comerce.jpg",
   },
   {
     title: "Checkout Conversacional",
     description:
       "Carrinho, pagamento e fechamento da venda sem sair da conversa.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    image: "/checkout.jpg",
   },
   {
     title: "Documentos Inteligentes",
     description:
       "Envio, leitura e resumo automático de PDFs, contratos e arquivos enviados pelo cliente.",
-    image:
-      "https://images.unsplash.com/photo-1581091870627-3c8c1c6c0a5b?w=600&h=400&fit=crop",
+    image: "/documentos.jpg",
   },
 ];
 
@@ -210,7 +207,7 @@ const ServicesSection = () => {
               <Button
                 size="lg"
                 className="
-      w-80 max-md:w-full mt-8
+      w-65 max-md:w-full mt-8
       rounded-full
       bg-gradient-to-r from-primary to-primary-glow
       text-primary-foreground
