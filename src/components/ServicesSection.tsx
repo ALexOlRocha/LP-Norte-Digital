@@ -6,27 +6,27 @@ import Fluxo from "./Fluxo";
 
 const services = [
   {
-    title: "01 - Agendamento Automático",
+    title: "Agendamento Automático",
     description:
       "O cliente escolhe data e horário direto no chat. Sem conflitos, sem troca de mensagens.",
     image: "/agendamento.jpg",
   },
   {
-    title: "02 - Sistema de Orçamento Inteligentes",
+    title: "Sistema de Orçamento Inteligentes",
     description:
       "A IA faz perguntas, entende a necessidade do cliente e gera orçamentos automaticamente.",
     image:
       "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop",
   },
   {
-    title: "03 - Vitrine & Produtos no Chat",
+    title: "Vitrine & Produtos no Chat",
     description:
       "O chat muda para modo vitrine e apresenta produtos, serviços, imagens e catálogos.",
     image:
       "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?w=600&h=400&fit=crop",
   },
   {
-    title: "04 - Checkout Conversacional",
+    title: "Checkout Conversacional",
     description:
       "Carrinho, pagamento e fechamento da venda sem sair da conversa.",
     image:
@@ -94,11 +94,11 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <h2 className="font-display text-5xl md:text-6xl font-bold mb-4">
+          <h2 className="font-display text-5xl md:text-6xl font-bold mb-4 space-x-2 max-w-4xl">
             <span className="gradient-text bg-gradient-to-r from-primary to-primary-glow">
               Automações
             </span>
-            que substituem trabalho humano
+            <span>que substituem trabalho humano</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-md">
             Tudo acontece dentro de uma única conversa. Sem sistemas soltos. Sem
