@@ -138,61 +138,6 @@ export const PageBotHeroSection = () => {
             <ArrowUpRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Button>
         </motion.div>
-
-        {/* Platform badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-4 mt-8"
-        >
-          {[
-            {
-              icon: MessageCircle,
-              label: "Chat",
-              color: "text-green-600",
-              bg: "bg-green-100",
-            },
-            {
-              icon: MessageCircle,
-              label: "WhatsApp",
-              color: "text-green-500",
-              bg: "bg-green-50",
-            },
-            {
-              icon: Mail,
-              label: "Email",
-              color: "text-blue-600",
-              bg: "bg-blue-100",
-            },
-            {
-              icon: CheckCircle,
-              label: "Web",
-              color: "text-purple-600",
-              bg: "bg-purple-100",
-            },
-            {
-              icon: FileText,
-              label: "SMS",
-              color: "text-orange-600",
-              bg: "bg-orange-100",
-            },
-          ].map((platform, index) => (
-            <motion.div
-              key={platform.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className={`flex items-center gap-2 px-3 py-2 rounded-lg ${platform.bg} border border-transparent hover:border-current/20 transition-colors`}
-            >
-              <platform.icon className={`w-4 h-4 ${platform.color}`} />
-              <span className="text-sm font-medium text-gray-700">
-                {platform.label}
-              </span>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
 
       {/* Floating icons decoration - LEFT SIDE */}

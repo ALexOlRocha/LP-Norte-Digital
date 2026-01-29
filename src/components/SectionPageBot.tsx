@@ -59,6 +59,17 @@ const SectionPageBot = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden relative">
+      {/* Wave */}
+      <svg
+        className="absolute bottom-0 left-0 w-full z-10 border-none"
+        viewBox="0 0 1440 320"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#ffffff"
+          d="M0,160 C480,320 960,0 1440,160 L1440,320 L0,320 Z"
+        />
+      </svg>
       {/* Animated Background Elements */}
       <motion.div
         variants={containerVariants}

@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 import VirtualAgentSection from "@/components/VirtualAgentSection";
 import SectionPageBot from "@/components/SectionPageBot";
+import SectionResolution from "@/components/sectionResolution";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -41,10 +42,12 @@ const Index = () => {
       <section id="whatsapp-bot">
         <SectionPageBot />
       </section>
-      <section id="whatsapp-bot">
+      {/* <section id="whatsapp-bot">
         <PageBotSection />
+      </section> */}
+      <section>
+        <SectionResolution />
       </section>
-
       <section id="core-products">
         <CoreProductSection />
       </section>
