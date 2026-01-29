@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ScrollPhrases from "@/components/ScrollPhrases";
-import CoreProductSection from "@/components/CoreProductSection";
 import ServicesSection from "@/components/ServicesSection";
 import DigitalPresenceSection from "@/components/DigitalPresenceSection";
 import PortfolioSection from "@/components/PortfolioSection";
@@ -9,7 +8,6 @@ import WebSystemsSection from "@/components/WebSystemsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import GaleriaSites from "@/components/GaleriaSites";
-import PageBotSection from "@/components/PageBotSection";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 import VirtualAgentSection from "@/components/VirtualAgentSection";
@@ -48,9 +46,7 @@ const Index = () => {
       <section>
         <SectionResolution />
       </section>
-      <section id="core-products">
-        <CoreProductSection />
-      </section>
+
       <VirtualAgentSection />
 
       <section id="services">

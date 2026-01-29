@@ -6,28 +6,27 @@ import Fluxo from "./Fluxo";
 
 const services = [
   {
-    title: "Agendamento Automático",
+    title: "01 - Agendamento Automático",
     description:
       "O cliente escolhe data e horário direto no chat. Sem conflitos, sem troca de mensagens.",
-    image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+    image: "/agendamento.jpg",
   },
   {
-    title: "Sistema de Orçamento",
+    title: "02 - Sistema de Orçamento Inteligentes",
     description:
       "A IA faz perguntas, entende a necessidade do cliente e gera orçamentos automaticamente.",
     image:
       "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop",
   },
   {
-    title: "Vitrine & Produtos no Chat",
+    title: "03 - Vitrine & Produtos no Chat",
     description:
       "O chat muda para modo vitrine e apresenta produtos, serviços, imagens e catálogos.",
     image:
       "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?w=600&h=400&fit=crop",
   },
   {
-    title: "Checkout Conversacional",
+    title: "04 - Checkout Conversacional",
     description:
       "Carrinho, pagamento e fechamento da venda sem sair da conversa.",
     image:
@@ -96,13 +95,14 @@ const ServicesSection = () => {
           className="mb-20"
         >
           <h2 className="font-display text-5xl md:text-6xl font-bold mb-4">
-            Nossas{" "}
             <span className="gradient-text bg-gradient-to-r from-primary to-primary-glow">
               Automações
             </span>
+            que substituem trabalho humano
           </h2>
           <p className="text-muted-foreground text-lg max-w-md">
-            Simplifique processos e escale resultados.
+            Tudo acontece dentro de uma única conversa. Sem sistemas soltos. Sem
+            perda de tempo.
           </p>
         </motion.div>
 
@@ -185,7 +185,7 @@ const ServicesSection = () => {
                           : "text-muted-foreground"
                       }`}
                     >
-                      Automação {service.title}
+                      {service.title}
                     </h4>
                   </div>
                   <motion.div

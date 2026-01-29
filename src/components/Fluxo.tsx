@@ -6,27 +6,25 @@ const Fluxo = () => {
       number: "01",
       icon: Search,
       title: "Entendemos sua necessidade",
-      description:
-        "Conversamos para entender seu desafio, objetivos e o que você precisa resolver.",
+      description: "Analisamos seu negocio, dores e objetivos.",
     },
     {
       number: "02",
       icon: Lightbulb,
-      title: "Planejamos a solução",
-      description:
-        "Desenhamos a melhor estratégia técnica para atingir seus resultados.",
+      title: "Desenhamos a solução",
+      description: "Planejamos as automações ideais para sua operação",
     },
     {
       number: "03",
       icon: Code2,
-      title: "Desenvolvemos o sistema",
+      title: "Construímos o sistema",
       description:
-        "Construímos sua solução com qualidade, focando em performance e usabilidade.",
+        "Construímos sua solução com qualidade, focando em performance, usabilidade e resultados.",
     },
     {
       number: "04",
       icon: Rocket,
-      title: "Entregamos e acompanhamos",
+      title: "Entregamos funcionando",
       description:
         "Entregamos funcionando e damos suporte para você aproveitar ao máximo.",
     },
@@ -59,8 +57,8 @@ const Fluxo = () => {
 
                 <div className="text-center">
                   {/* Step Number */}
-                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-card border border-border mb-6 relative group hover:border-primary/50 transition-colors">
-                    <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center">
+                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-card border border-border mb-6 relative group hover:border-primary/50 transition-colors">
+                    <span className="absolute -top-3 -right-1 w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center">
                       {step.number}
                     </span>
                     <step.icon className="w-10 h-10 text-primary" />
