@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import {
-  ArrowUpRight,
-  Star,
-  MessageCircle,
-  Mail,
-  CheckCircle,
-  FileText,
-} from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
 import abstractShapes from "@/assets/abstract-shapes.png";
 import { useRef } from "react";
 

@@ -50,7 +50,7 @@ const HeroSection = () => {
             scale: [1, 1.1, 1],
           }}
           transition={{
-            duration: 10,
+            duration: 15,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -64,7 +64,7 @@ const HeroSection = () => {
             scale: [1, 1.2, 1],
           }}
           transition={{
-            duration: 12,
+            duration: 15,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -89,7 +89,7 @@ const HeroSection = () => {
             >
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm text-muted-foreground font-display">
-                Automação que gera vendas
+                Sistema inteligente de vendas e atendimento
               </span>
             </motion.div>
 
@@ -97,7 +97,7 @@ const HeroSection = () => {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
               Automação que
@@ -112,7 +112,7 @@ const HeroSection = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Automatize atendimento, qualifique leads e gere orçamentos
@@ -178,7 +178,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="relative"
           >
             <PageBotDemo />

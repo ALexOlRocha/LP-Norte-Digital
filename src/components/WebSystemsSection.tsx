@@ -3,13 +3,13 @@ import { useRef } from "react";
 
 import {
   Calculator,
-  Package,
   LineChart,
   Cog,
   ArrowRight,
   Sparkles,
   CheckCircle,
 } from "lucide-react";
+import { IoChatbubblesOutline } from "react-icons/io5";
 
 const systems = [
   {
@@ -21,15 +21,15 @@ const systems = [
     features: ["IA integrada", "Relatórios automáticos", "Multi-formatos"],
   },
   {
-    icon: Package,
-    title: "Estoque Inteligente",
-    description: "Controle total com alertas",
+    icon: IoChatbubblesOutline,
+    title: "Atendimento 24/7",
+    description: "Chatbots inteligentes",
     color: "from-emerald-500 to-green-400",
     gradient: "from-emerald-500/20 via-emerald-400/10 to-transparent",
     features: [
-      "Alertas automáticos",
-      "Controle em tempo real",
-      "Integração total",
+      "Respostas instantâneas",
+      "Análise de sentimentos",
+      "Qualificação de leads",
     ],
   },
   {
@@ -40,7 +40,7 @@ const systems = [
     gradient: "from-purple-500/20 via-purple-400/10 to-transparent",
     features: [
       "Visualização avançada",
-      "KPI's personalizados",
+      "Gestão de assinaturas",
       "Exportação em tempo real",
     ],
   },
@@ -192,7 +192,7 @@ const WebSystemsSection = () => {
             Sistemas{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                sob medida
+                Inteligentes com IA
               </span>
               <svg
                 className="absolute -bottom-6 left-0 w-full h-8"
@@ -242,8 +242,9 @@ const WebSystemsSection = () => {
           </h2>
 
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
-            Desenvolvemos soluções únicas que se adaptam perfeitamente às
-            necessidades específicas do seu negócio com tecnologia de ponta
+            Criamos uma plataforma modular que se adpta ao seu negócio e
+            automatiza atendimento, vendas e processos tudo com intelignência
+            artificial.
           </p>
         </motion.div>
 

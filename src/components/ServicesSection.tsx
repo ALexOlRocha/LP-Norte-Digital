@@ -140,13 +140,13 @@ const ServicesSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span className="text-primary text-sm font-medium mb-2 block">
+              <span className="text-primary text-3xl font-bold mb-2 block">
                 0{activeIndex + 1}
               </span>
-              <h3 className="font-display text-3xl font-bold text-foreground">
+              <h3 className="font-display text-4xl font-bold text-foreground">
                 {services[activeIndex].title}
               </h3>
-              <p className="text-muted-foreground mt-2">
+              <p className="text-gray-300 mt-2">
                 {services[activeIndex].description}
               </p>
             </motion.div>
@@ -172,7 +172,7 @@ const ServicesSection = () => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-primary/60 text-sm">
+                    <span className="text-primary/60 text-2xl font-bold mb-2 block">
                       0{index + 1}
                     </span>
                     <h4

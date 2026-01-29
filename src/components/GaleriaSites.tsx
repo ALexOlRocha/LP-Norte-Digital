@@ -51,13 +51,13 @@ const Portfolio: React.FC<PortfolioProps> = ({
       {/* Headline */}
       <div className="text-center z-10 max-w-5xl">
         <h1 className="text-white text-5xl md:text-6xl font-bold mb-4">
-          Seu site não é um cartão de visitas.
-          <span className="block text-emerald-400">
-            É uma máquina de vendas.
+          Ter um site não é suficiente.
+          <span className="block text-emerald-600">
+            Ele precisa gerar resultados.
           </span>
         </h1>
         <p className="text-zinc-300 text-xl md:text-2xl mb-8">
-          Veja projetos criados para converter visitantes em clientes
+          Funcionalidades que convertem visitantes em clientes. Veja algumas
         </p>
       </div>
 
@@ -114,33 +114,33 @@ const PortfolioCard = ({ item }: { item: PortfolioItem }) => {
 const defaultPortfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    imageUrl: "/screencapture-jaguaris.png",
-    title: "LP da Jaguaris",
+    imageUrl: "/agendamento.jpg",
+    title: "Agendamento",
   },
   {
     id: 2,
     imageUrl: "/screencapture-e-commerce-mk.png",
-    title: "E-commerce MK + ChatBot",
+    title: "Orçamentos",
   },
   {
     id: 3,
     imageUrl: "/screencapture-zarpfy.png",
-    title: "Sistema Zarpfy",
+    title: "Vitrine Online",
   },
   {
     id: 4,
     imageUrl: "/screencapture-aryehsheva.png",
-    title: "LP Aryeh Sheva",
+    title: "Quiz Interativo",
   },
   {
     id: 5,
     imageUrl: "/screencapture-pedronitools.png",
-    title: "Pedroni Tools",
+    title: "Envio de imagens",
   },
   {
     id: 6,
     imageUrl: "/screencapture-mkdistribuidora.png",
-    title: "MK Distribuidora",
+    title: "Catálogo Digital",
   },
 ];
 

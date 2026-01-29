@@ -8,6 +8,7 @@ import WebSystemsSection from "@/components/WebSystemsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import GaleriaSites from "@/components/GaleriaSites";
+
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 import VirtualAgentSection from "@/components/VirtualAgentSection";
@@ -53,9 +54,9 @@ const Index = () => {
         <ServicesSection />
       </section>
 
-      <section id="digital-presence">
+      {/* <section id="digital-presence">
         <DigitalPresenceSection />
-      </section>
+      </section> */}
 
       <section id="gallery">
         <GaleriaSites />

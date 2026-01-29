@@ -53,17 +53,17 @@ const VirtualAgentSection: React.FC = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen py-8 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-background to-background/80"
+      className="relative min-h-screen py-8  px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-background to-background/80"
     >
-      {/* Grid de partículas sutis */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20" />
-
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center "
       >
+        {" "}
+        {/* Grid de partículas sutis */}
+        <div className="absolute inset-0  bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20" />{" "}
         {/* Texto institucional */}
         <div className="space-y-8">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
@@ -77,7 +77,7 @@ const VirtualAgentSection: React.FC = () => {
             Conheça{" "}
             <span className="relative">
               <span className="relative z-10 bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                NØRA
+                NØRA,
               </span>
               <svg
                 className="absolute -bottom-4 left-0 w-full h-8"
@@ -124,17 +124,15 @@ const VirtualAgentSection: React.FC = () => {
                 </defs>
               </svg>
             </span>{" "}
-            seu agente estratégico,
-            <span className="block mt-2">trabalhando 24h</span>
+            a inteligência estratégica do PageBot, trabalhando 24h.
           </h2>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-            Um sistema vivo que entende o usuário e age no momento certo —
-            combinando inteligência artificial com design intuitivo para uma
-            experiência fluida e personalizada.
+            Uma IA viva que entende o usuário e age no momento certo combinando
+            inteligência artificial com design intuitivo para uma experiência
+            fluida e personalizada.
           </p>
         </div>
-
         {/* AGENTE */}
         <div className="relative flex justify-center items-center min-h-[500px] lg:min-h-[600px]">
           {/* Auras concêntricas */}
@@ -366,11 +364,9 @@ const VirtualAgentSection: React.FC = () => {
           </svg>
         </div>
       </motion.div>
-
       {/* Background decorativo */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-glow/10 rounded-full blur-3xl -z-10" />
-
       {/* Linhas conectivas sutis */}
       <svg className="absolute inset-0 w-full h-full -z-10">
         <motion.path
