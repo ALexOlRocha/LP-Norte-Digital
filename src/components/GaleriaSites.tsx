@@ -35,8 +35,8 @@ const Portfolio: React.FC<PortfolioProps> = ({
           d="M0,160 C480,320 960,0 1440,160 L1440,320 L0,320 Z"
         />
       </svg>
-      <span className="text-emerald-400 text-sm font-semibold tracking-wider uppercase border border-emerald-400/30 px-4 py-2 rounded-full z-10">
-        Portfolio
+      <span className="text-emerald-400 text-sm font-semibold tracking-wider uppercase border border-emerald-400/30 px-4 py-2 rounded-full z-10 mb-5">
+        Funcionalidades que convertem
       </span>
 
       {/* Texto decorativo */}
