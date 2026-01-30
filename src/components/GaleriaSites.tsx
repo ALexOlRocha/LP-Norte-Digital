@@ -101,8 +101,8 @@ const PortfolioCard = ({ item }: { item: PortfolioItem }) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-        <span className="text-white text-xl font-bold">{item.title}</span>
+      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+        <span className="text-white text-2xl font-bold">{item.title}</span>
       </div>
     </motion.div>
   );
@@ -114,33 +114,39 @@ const PortfolioCard = ({ item }: { item: PortfolioItem }) => {
 const defaultPortfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    imageUrl: "/agendamento.jpg",
-    title: "Agendamento",
+    imageUrl: "/agendamento-2.jpeg",
+    title: "Agenda cheia 24h",
+    alt: "Pacientes agendam automaticamente",
   },
   {
     id: 2,
-    imageUrl: "/screencapture-e-commerce-mk.png",
-    title: "Orçamentos",
+    imageUrl: "/orcamento-2.jpg",
+    title: "Orçamentos automáticos",
+    alt: "Orçamentos sem atendimento manual",
   },
   {
     id: 3,
-    imageUrl: "/screencapture-zarpfy.png",
-    title: "Vitrine Online",
+    imageUrl: "/messagem-rapido.jpg",
+    title: "Respostas instantâneas",
+    alt: "Atendimento imediato no WhatsApp",
   },
   {
     id: 4,
-    imageUrl: "/screencapture-aryehsheva.png",
-    title: "Quiz Interativo",
+    imageUrl: "/qualificados.jpg",
+    title: "Leads pré-qualificados",
+    alt: "Clientes certos chegam até você",
   },
   {
     id: 5,
-    imageUrl: "/screencapture-pedronitools.png",
-    title: "Envio de imagens",
+    imageUrl: "/menos-suporte.jpg",
+    title: "Menos trabalho manual",
+    alt: "Equipe foca no atendimento real",
   },
   {
     id: 6,
-    imageUrl: "/screencapture-mkdistribuidora.png",
-    title: "Catálogo Digital",
+    imageUrl: "/autoridade.jpg",
+    title: "Imagem profissional",
+    alt: "Negócio moderno e confiável",
   },
 ];
 

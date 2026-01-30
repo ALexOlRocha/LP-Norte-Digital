@@ -8,7 +8,7 @@ export const PageBotHeroSection = () => {
   const bgShapesRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="pt-32 pb-20 px-6 min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+    <section className="pt-32 pb-20 px-6 min-h-screen bg-gradient-to-b from-background via-secondary/20 to-background flex flex-col items-center justify-center relative overflow-hidden">
       {/* Background Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background" />
 
@@ -76,7 +76,7 @@ export const PageBotHeroSection = () => {
               ))}
             </div>
             <span className="text-sm font-medium text-muted-foreground ml-1">
-              +200 empresas automatizadas
+              +100 empresas automatizadas
             </span>
           </div>
         </motion.div>
@@ -88,10 +88,10 @@ export const PageBotHeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 leading-tight">
-            <span className="text-foreground">Ecossistema Completo de</span>
+            <span className="text-foreground">Ecossistema completo de</span>
             <br />
             <span className="italic  bg-gradient-to-r from-primary via-primary/90 to-primary bg-clip-text text-transparent">
-              Automação Inteligente
+              automação inteligente
             </span>
           </h1>
         </motion.div>
@@ -107,7 +107,7 @@ export const PageBotHeroSection = () => {
           <strong className="text-foreground bg-primary/10 px-1.5 py-0.5 rounded">
             24 horas por dia
           </strong>{" "}
-          Automatize seu atendimento, qualifique leads e gere orçamentos
+          automatize seu atendimento, qualifique leads e gere orçamentos
           automáticos
           <strong className="text-foreground bg-primary/10 px-1.5 py-0.5 rounded">
             enquanto você foca no que importa.

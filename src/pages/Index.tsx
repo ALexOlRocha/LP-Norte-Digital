@@ -14,6 +14,7 @@ import Loading from "@/components/Loading";
 import VirtualAgentSection from "@/components/VirtualAgentSection";
 import SectionPageBot from "@/components/SectionPageBot";
 import SectionResolution from "@/components/sectionResolution";
+import FlowComparisonSection from "@/components/FlowComparisonSection";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -49,6 +50,7 @@ const Index = () => {
       </section>
 
       <VirtualAgentSection />
+      <FlowComparisonSection />
 
       <section id="services">
         <ServicesSection />
