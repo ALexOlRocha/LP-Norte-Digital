@@ -120,7 +120,7 @@ const defaultPortfolioItems: PortfolioItem[] = [
   },
   {
     id: 2,
-    imageUrl: "/orcamento-2.jpg",
+    imageUrl: "/orcamento-4.jpeg",
     title: "Orçamentos automáticos",
     alt: "Orçamentos sem atendimento manual",
   },
